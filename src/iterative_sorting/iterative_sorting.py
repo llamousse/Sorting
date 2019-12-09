@@ -7,11 +7,12 @@ def selection_sort( arr ):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
 
-        # checking each element in arr
+        # checking each element in arr using slices
         for x in arr[i:]:
+            # if x is less than value of smallest_index
             if x <= arr[smallest_index]:
                 # sets smallest_index to the index in arr
-                smallest_index = arr.index(x) 
+                smallest_index = arr.index(x)
 
         # TO-DO: swap
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
@@ -29,6 +30,7 @@ def bubble_sort( arr ):
                 swap = True
                 # swap if current index > neighbor index
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        # if no swapping occcured, break out
         if swap == False:
             pass
     return arr
